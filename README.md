@@ -202,6 +202,8 @@ http://localhost:8501
 
 ------------------------------------------------------------------------
 
+## The application is fully containerized using Docker for reproducible deployment
+
 ## Author
 
 Balqees Adel jamil
