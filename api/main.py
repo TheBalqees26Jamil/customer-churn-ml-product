@@ -4,9 +4,9 @@ from pathlib import Path
 import joblib
 import pandas as pd
 
-# -----------------------
+
 # Load model
-# -----------------------
+
 BASE_DIR = Path(__file__).resolve().parent.parent
 MODEL_PATH = BASE_DIR / "models" / "logistic_churn_model.pkl"
 
@@ -15,14 +15,14 @@ model = joblib.load(MODEL_PATH)
 
 expected_features = model.named_steps["preprocessor"].feature_names_in_
 
-# -----------------------
+
 # App
-# -----------------------
+
 app = FastAPI(title="Customer Churn Prediction API")
 
-# -----------------------
+# 
 # Input Schema
-# -----------------------
+
 class CustomerData(BaseModel):
     tenure: float
     MonthlyCharges: float
@@ -35,16 +35,16 @@ class CustomerData(BaseModel):
     PhoneService: str
     InternetService: str
 
-# -----------------------
+
 # Root
-# -----------------------
+
 @app.get("/")
 def home():
     return {"message": "Churn Prediction API is running 🚀"}
 
-# -----------------------
+
 # Predict
-# -----------------------
+
 @app.post("/predict")
 def predict(data: CustomerData):
 
