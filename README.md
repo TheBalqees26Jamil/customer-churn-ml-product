@@ -19,6 +19,10 @@ model for deployment
 project/
 │── api/
 │   └── main.py
+
+│── frontend/
+│   └── app.py
+│ 
 │── data/
 │   ├── processed/
 │           └── clean_data.csv 
@@ -137,14 +141,64 @@ classifier
 
 ------------------------------------------------------------------------
 
+## Frontend (Streamlit UI)
+
+A simple and modern user interface was built using Streamlit to allow
+end-users to interact with the Customer Churn Prediction API.
+
+The UI enables users to input customer information and instantly receive
+real-time predictions from the trained machine learning model.
+
+Key features of the interface:
+- Clean and modern yellow-themed design
+- Real-time API integration with FastAPI backend
+- User-friendly input form for customer attributes
+- Instant churn probability and prediction results
+- Responsive and interactive layout
+
+The frontend communicates directly with the FastAPI backend using HTTP
+requests to the `/predict` endpoint.
+
+
+------------------------------------------------------------------------
+
+## How to Run the Project
+
+### 1. Run the FastAPI Backend
+
+Start the API server:
+
+```bash
+uvicorn api.main:app --reload
+```
+Then open:
+
+http://127.0.0.1:8000/docs
+
+Run the Streamlit Frontend
+
+Start the user interface:
+
+```bash
+streamlit run frontend/app.py
+```
+Then open:
+
+http://localhost:8501
+
+------------------------------------------------------------------------
+
 ## Tools Used
 
--   Python
--   pandas
--   scikit-learn
--   FastAPI
--   SHAP
--   joblib
+- Python
+- pandas
+- numpy
+- scikit-learn
+- FastAPI
+- Streamlit
+- SHAP
+- joblib
+- Uvicorn
 
 ------------------------------------------------------------------------
 
