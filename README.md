@@ -226,6 +226,13 @@ http://localhost:8501
 
 ## The application is fully containerized using Docker for reproducible deployment
 
+
+
+## 📊 Model Report
+
+![Churn Report](reports/Report.jpg)
+
+
 ## Author
 
 Balqees Adel jamil
