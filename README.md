@@ -61,6 +61,10 @@ param_grid = {
     "classifier__penalty": ["l2"]
 }
 ```
+The hyperparameter values were selected to explore different levels of model regularization and optimization strategies. 
+The C values ranged from strong regularization (0.01) to weaker regularization (10) in order to balance underfitting and overfitting. 
+Two commonly used solvers, lbfgs and liblinear, were evaluated to identify the most suitable optimization method for the dataset. 
+L2 regularization was used because it is stable and widely recommended for Logistic Regression models.
 
 Evaluation: - Accuracy ≈ 0.74 - Recall for churn ≈ 0.79 - Mean CV F1 ≈
 0.63
