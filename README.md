@@ -35,11 +35,7 @@ project/
 │   └── 02_model_training.ipynb
 │── reports/
 |    └──Report.jpg
-│── tests/
-│   └── test_api.py
-│── .github/
-│   └── workflows/
-│       └── ci.yml
+│
 │── .dockerignore
 │── .gitignore
 │── Dockerfile
