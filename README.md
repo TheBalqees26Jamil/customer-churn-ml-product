@@ -33,8 +33,6 @@ project/
 │── notebooks/
 │   ├── 01_data_preparation.ipynb
 │   └── 02_model_training.ipynb
-│── reports/
-|    └──Report.jpg
 │
 │── .dockerignore
 │── .gitignore
@@ -226,11 +224,6 @@ http://localhost:8501
 
 ## The application is fully containerized using Docker for reproducible deployment
 
-
-
-## 📊 Model Report
-
-![Churn Report](reports/Report.jpg)
 
 
 ## Author
