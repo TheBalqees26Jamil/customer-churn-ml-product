@@ -34,6 +34,12 @@ project/
 │   ├── 01_data_preparation.ipynb
 │   └── 02_model_training.ipynb
 │── reports/
+|    └──Report.jpg
+│── tests/
+│   └── test_api.py
+│── .github/
+│   └── workflows/
+│       └── ci.yml
 │── .dockerignore
 │── .gitignore
 │── Dockerfile
@@ -68,6 +74,22 @@ L2 regularization was used because it is stable and widely recommended for Logis
 
 Evaluation: - Accuracy ≈ 0.74 - Recall for churn ≈ 0.79 - Mean CV F1 ≈
 0.63
+
+------------------------------------------------------------------------  
+
+## Model Comparison: Baseline vs Optimized
+
+The baseline Logistic Regression model achieved an accuracy of 0.81 with an F1-score of 0.61 for the churn class. However, it showed limited ability to correctly identify churned customers, with a recall of 0.56.
+
+After applying hyperparameter tuning using GridSearchCV, the optimized model achieved a slightly lower accuracy of 0.74 but significantly improved recall for the churn class (0.79). This indicates that the tuned model is more effective at identifying customers likely to churn.
+
+Although accuracy decreased, the improvement in recall is more valuable for this business problem, where correctly identifying churned customers is critical.
+
+Cross-validation further confirmed model stability with a mean F1-score of 0.63. 
+
+> 💡 In churn prediction problems, recall for the positive class (churned customers) is more important than overall accuracy, because failing to identify at-risk customers leads to business loss.
+
+
 
 ------------------------------------------------------------------------
 
